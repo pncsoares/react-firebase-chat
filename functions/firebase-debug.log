@@ -1,0 +1,41 @@
+[debug] [2021-05-15T17:20:24.762Z] ----------------------------------------------------------------------
+[debug] [2021-05-15T17:20:24.764Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2021-05-15T17:20:24.764Z] CLI Version:   9.10.2
+[debug] [2021-05-15T17:20:24.764Z] Platform:      darwin
+[debug] [2021-05-15T17:20:24.764Z] Node Version:  v14.16.1
+[debug] [2021-05-15T17:20:24.765Z] Time:          Sat May 15 2021 18:20:24 GMT+0100 (Western European Summer Time)
+[debug] [2021-05-15T17:20:24.765Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-15T17:20:24.774Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-15T17:20:24.774Z] > authorizing via signed-in user (pncsoares@gmail.com)
+[debug] [2021-05-15T17:20:24.775Z] [iam] checking project fireship-demos for permissions ["firebase.projects.get"]
+[debug] [2021-05-15T17:20:24.776Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-demos:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-05-15T17:20:25.588Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 15 May 2021 17:20:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=717","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-15T17:20:25.589Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project fireship-demos:
+
+  firebase.projects.get
+[warn] ⚠  Your requested "node" version "10" doesn't match your global version "14" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"14\""}}
+[debug] [2021-05-15T17:20:25.613Z] defaultcredentials: writing to file /Users/pedrosoares/.config/firebase/pncsoares_gmail_com_application_default_credentials.json
+[debug] [2021-05-15T17:20:25.614Z] DEBUG: Setting GAC to /Users/pedrosoares/.config/firebase/pncsoares_gmail_com_application_default_credentials.json
+[debug] [2021-05-15T17:20:25.615Z] > refreshing access token with scopes: []
+[debug] [2021-05-15T17:20:25.615Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-15T17:20:25.746Z] <<< HTTP RESPONSE 200 {"date":"Sat, 15 May 2021 17:20:25 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-15T17:20:25.803Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos/adminSdkConfig [none]
+[debug] [2021-05-15T17:20:26.116Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos/adminSdkConfig 403
+[debug] [2021-05-15T17:20:26.116Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos/adminSdkConfig {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-05-15T17:20:26.116Z] Failed to get Admin SDK config for fireship-demos, falling back to cache Failed to get Admin SDK for Firebase project fireship-demos. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project fireship-demos. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}},"response":{"statusCode":403}},"exit":1,"message":"HTTP Error: 403, The caller does not have permission","status":403},"status":500}
+[warn] ⚠  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2021-05-15T17:20:26.124Z] [functions] Watching "/Users/pedrosoares/Projects/Tutorials/React/react-firebase-chat/functions" for Cloud Functions...
+[debug] [2021-05-15T17:20:26.136Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-05-15T17:20:26.137Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-05-15T17:20:26.137Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-05-15T17:20:26.137Z] DEBUG: [worker-~diagnostic~-8acd538d-7539-46e3-83c9-6e051bc76a54]: Assigning socketPath: /var/folders/vx/ck5y6_c919901159dsv9gy_m0000gp/T/fire_emu_6216.sock
+[debug] [2021-05-15T17:20:26.138Z] DEBUG: [worker-~diagnostic~-8acd538d-7539-46e3-83c9-6e051bc76a54]: BUSY
+[debug] [2021-05-15T17:20:26.257Z] DEBUG: [runtime-status] [6216] Functions runtime initialized. {"cwd":"/Users/pedrosoares/Projects/Tutorials/React/react-firebase-chat/functions","node_version":"14.16.1"}
+[debug] [2021-05-15T17:20:26.258Z] DEBUG: [runtime-status] [6216] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed. This package is in your package.json, but it's not available. You probably need to run \"npm install\" in your functions directory."}}
+[debug] [2021-05-15T17:20:26.260Z] [functions] Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2021-05-15T17:20:26.275Z] DEBUG: [worker-~diagnostic~-8acd538d-7539-46e3-83c9-6e051bc76a54]: exited
+[debug] [2021-05-15T17:20:26.275Z] DEBUG: [worker-~diagnostic~-8acd538d-7539-46e3-83c9-6e051bc76a54]: FINISHED
