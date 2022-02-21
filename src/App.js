@@ -17,9 +17,7 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 const analytics = firebase.analytics();
 
-
 function App() {
-
   const [user] = useAuthState(auth);
 
   return (
@@ -32,13 +30,11 @@ function App() {
       <section>
         {user ? <ChatRoom /> : <SignIn />}
       </section>
-
     </div>
   );
 }
 
 function SignIn() {
-
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
@@ -50,7 +46,6 @@ function SignIn() {
       <p>Do not violate the community guidelines or you will be banned for life!</p>
     </>
   )
-
 }
 
 function SignOut() {
@@ -66,9 +61,7 @@ function ChatRoom() {
   const query = messagesRef.orderBy('createdAt').limit(25);
 
   const [messages] = useCollectionData(query, { idField: 'id' });
-
   const [formValue, setFormValue] = useState('');
-
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -88,27 +81,19 @@ function ChatRoom() {
 
   return (<>
     <main>
-
       {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-
       <span ref={dummy}></span>
-
     </main>
 
     <form onSubmit={sendMessage}>
-
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
-
       <button type="submit" disabled={!formValue}>🕊️</button>
-
     </form>
   </>)
 }
 
-
 function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
-
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 
   return (<>
@@ -118,6 +103,5 @@ function ChatMessage(props) {
     </div>
   </>)
 }
-
 
 export default App;
